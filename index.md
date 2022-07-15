@@ -4,9 +4,11 @@ This page is using the Jekyll slate theme that is selected in [repository settin
 
 # Mermaid
 
+
+
 ```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+  flowchart TD;
+      A[Receive  file] --> B{Valid file?};
+      B-- Yes --> C[Process file]-->D[Send Processed Message];
+      B-- No --> E[Send Error Message];
+     
